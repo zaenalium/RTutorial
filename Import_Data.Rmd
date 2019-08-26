@@ -1,0 +1,76 @@
+---
+title: "Import Data"
+author: "Ahmad Zaenal"
+date: "August 25, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Topic
+
+
+- Intro to R (Importing Files, Directory, etc.)
+- Basic R (Vector, Matrices, Factor, Data Frame, List)
+- Intermediate R (Conditional, Loops, Function, etc.)
+
+
+## Importing Data
+
+Import data menggunakan base R vs Tidyverse
+
+```{r cars, echo = TRUE}
+
+#Base R
+
+df <- read.csv("test_data")
+
+
+##dplyr
+library(tidyverse)
+
+df_tidy <- read_csv("test_data")
+
+```
+
+
+## Hal yang perlu diperhatikan
+
+* nama file & direktori penyimanan data
+* separator
+* jumlah row (jika data besar)
+
+```{r cars, echo = TRUE}
+
+#Base R
+
+df <- read.csv("vehicle0.dat")
+
+
+##dplyr
+library(tidyverse)
+
+df_tidy <- read_csv("vehicle0.dat")
+
+```
+
+
+
+
+
+## Bingung ??
+
+Jika bingung cara pertama yang paling cepat adalah menggunakan **help**
+```{r pressure}
+?read.csv
+help("read.csv")
+
+?read.csv
+help("read_csv")
+
+help(package = "dplyr")
+
+```
+
